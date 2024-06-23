@@ -51,8 +51,7 @@ func Register(c *fiber.Ctx) error {
 
 	}
 	user:=models.User{
-		FirstName: data["first_name"].(string),
-		LastName: data["last_name"].(string),
+		Username: data["username"].(string),
 		Phone: data["phone"].(string),
 		Email: strings.TrimSpace(data["email"].(string)),
 
